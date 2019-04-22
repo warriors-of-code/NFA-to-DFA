@@ -6,7 +6,7 @@ import java.awt.geom.*;
 import javax.swing.*;
 import javax.swing.border.*;
 
-public class DrawFrame extends JFrame{
+public class DrawFrame extends JFrame implements ActionListener{
 
   int nodes;
   int variables;
@@ -130,6 +130,18 @@ public class DrawFrame extends JFrame{
               break;
     }
 
+    //addActionListeners
+    btn1.addActionListener(this); btn1.setName("A");
+    btn2.addActionListener(this); btn2.setName("B");
+    btn3.addActionListener(this); btn3.setName("C");
+    btn4.addActionListener(this); btn4.setName("D");
+    btn5.addActionListener(this); btn5.setName("E");
+
+  }
+
+  public void actionPerformed(ActionEvent e){
+    JButton btn = (JButton)e.getSource();
+    System.out.println(btn.getName());
   }
 
 }
