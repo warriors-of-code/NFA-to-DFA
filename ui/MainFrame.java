@@ -26,7 +26,7 @@ public class MainFrame extends JFrame{
     label = new JLabel("Please enter the following values to proceed!");
     label.setBounds(250,70,200,30);
 
-    labelNodes = new JLabel("Enter number of nodes (max 4)");
+    labelNodes = new JLabel("Enter number of nodes (max 5)");
     labelNodes.setBounds(170,150,250,30);
 
     textNodes = new JTextField();
@@ -51,8 +51,8 @@ public class MainFrame extends JFrame{
                     JOptionPane.showMessageDialog(null, "Please enter the number of nodes!");
                     return;
                   }
-                  if(Integer.parseInt(textNodes.getText()) > 4){
-                    JOptionPane.showMessageDialog(null, "Maximum number of nodes can be 4!");
+                  if(Integer.parseInt(textNodes.getText()) > 5){
+                    JOptionPane.showMessageDialog(null, "Maximum number of nodes can be 5!");
                     return;
                   }
                 } catch(Exception e){
