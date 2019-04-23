@@ -13,7 +13,7 @@ public class MainFrame extends JFrame{
   JLabel label;
   JTextField textNodes;
   JTextField textVariables;
-  Button button;
+  JButton button;
 
   public MainFrame(){
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -38,8 +38,9 @@ public class MainFrame extends JFrame{
     textVariables = new JTextField();
     textVariables.setBounds(450,200,30,30);
 
-    button = new Button("Proceed");
-    button.setBounds(200,300,300,40);
+    button = new JButton("Proceed");
+    button.setBackground(Color.green);
+    button.setBounds(160,300,325,40);
     button.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent mouseEvent) {
